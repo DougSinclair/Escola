@@ -1,24 +1,25 @@
-   public class Aluno {
+   public class Aluno extends Pessoa {
 
-    private int matricula = 0;
-    private String nome = "";
-    private String email = "";
+	private long matricula;
 
-        public void setNome(String nome){
-            nome = this.nome;
-        }
-
-        public void setEmail(String email){
-            this.email = email;
-        }
+	public Aluno (String n, String e,long m){
+		super (n,e);
+		this.matricula = m;
+	}
+	 public String getMatricula(){
+            matricula = this.matricula;
+	}
+	public void setmatricula(String Matricula){
+            matricula = this.matricula;
+	}
 
         public void setMatricula(int matricula){
             this.matricula = matricula;
         }
 
         public void mostraDadosAluno(){
-            System.out.println("\nDados do Aluno\nNome: "+ nome +"\nEmail: "+ email +"\nMatricula: "+ matricula);
+		super.mostraDados();
+            System.out.println("Matricula: "+ this.matricula);
 	}
 
 }
-

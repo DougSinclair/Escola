@@ -1,13 +1,28 @@
- public class Professor extends Pessoa{
+public class Professor extends Pessoa {
+    private String disciplina;
+    private int cargaHoraria;
 
-    private int cargaHora = 0;
-    private String disciplina = "";
-
-        public void setCargaHra(int hora){
-            this.Carga = hora;
+    public Professor(String nome, String email, String disciplina, int cargaHoraria){
+        super(nome, email);
+        this.disciplina = disciplina;
+        this.cargaHoraria = cargaHoraria;
+    }
+	  public void setNome(String nome){
+            nome = this.nome;
         }
-
-        public void mostraDadosProf(){
-            System.out.println("\n Dados do Professor\n Nome: "+ nome +"\n Email: "+ email +"\n Carga Horaria em Horas: "+ cargaHora +"\n Disciplina: "+ disciplina);
+        public void setEmail(String email){
+            this.email = email;
         }
-}
+        //gets
+        public String getNome(){
+            return this.nome;
+        }
+        public String getEmail(){
+            return this.email;
+        }
+    public void mostraDados();{
+        super.mostraDados();
+        System.out.println("Disciplina: " + this.disciplina);
+        System.out.println("Carga Horária: " + this.cargaHoraria); 
+	}
+} 

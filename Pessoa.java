@@ -12,8 +12,8 @@
     }
 
         
-        public void setNome(String name){
-            name = this.nome;
+        public void setNome(String nome){
+            nome = this.nome;
         }
         public void setEmail(String email){
             this.email = email;
