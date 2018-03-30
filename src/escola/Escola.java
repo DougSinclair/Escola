@@ -1,6 +1,7 @@
 package escola;
 
-import java.util.ArrayList;    
+import java.util.ArrayList;
+import java.util.Scanner;    
 public class Escola {
 
         public static void main(String args[]){
@@ -15,11 +16,15 @@ public class Escola {
 		prof.mostraDados();*/
 
 		testaLista();
+		mostraMenu();
 
 
 
   	}
-	public static void testaLista(){
+	private static void mostraMenu() {
+			
+		}
+	public static int testaLista(){
 	
 
 		ArrayList<String> listaAlunos = new ArrayList<String>();
@@ -27,17 +32,17 @@ public class Escola {
 		listaAlunos.add ("Doug");
 		listaAlunos.add	("Vitor");
 		listaAlunos.add ("Amanda");
-		listaAlunos.add ("Bananinha");
+		listaAlunos.add ("Dante");
 		listaAlunos.add ("Putin");
 		listaAlunos.add ("Vin");
 		listaAlunos.add ("Marcus");
-		listaAlunos.add ("Lara");
-		listaAlunos.add ("João");
-		listaAlunos.add ("Ana");
+		listaAlunos.add ("Guilherme");
+		listaAlunos.add ("Nick");
+		listaAlunos.add ("Lauren");
 
 		ArrayList<Integer> listaNotas = new ArrayList<Integer>();
 
-		listaNotas.add (5);
+		listaNotas.add (8);
 		listaNotas.add (7);
 		listaNotas.add (3);
 		listaNotas.add (4);
@@ -56,10 +61,37 @@ public class Escola {
             System.out.println("O aluno " + listaAlunos.get(listaNotas.indexOf(nota)));
             if(nota >= 7){
                 System.out.println("Ta Aprovado");
-            }else  
+            }else {  
                 System.out.println("Rodou");
-		} 
-	}
-}
+               
+                    public static void main(String[] args) {
+                        Scanner l = new Scanner(System.in);
+                        System.out.println("Cadastro de alunos e professores");
+                        System.out.println("Digite os dados: "+"\nNome ");
+                        String nome = l.nextLine();
+                        System.out.println("Login required ");
+                        String login = l.nextLine();
+                        System.out.println("ocupação");
+                        String cargo = l.nextLine();
+                        System.out.println("Senha");
+                        int senha = l.nextInt();
+                        Dados usuario;
+                        usuario = new Dados();
+                        usuario.setNome(nome);
+                        usuario.setLogin(login);
+                        usuario.setCargo(ocupacao);
+                        ArrayList<Dados> usuarios = new ArrayList<Dados>();
+                        usuarios.add(usuario);
+                        System.out.println(usuario.getNome()+"\n"+usuario.getLogin()+"\n"+usuario.getCargo());
+            }
+            
 
+      }
+		return 0;
+	}
+	
+}
+       
+
+       
 
