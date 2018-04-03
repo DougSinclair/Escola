@@ -1,97 +1,45 @@
 package escola;
 
-import java.util.ArrayList;
-import java.util.Scanner;    
+import java.util.Scanner;
+
 public class Escola {
 
-        public static void main(String args[]){
+	public static Scanner scan = new Scanner(System.in);
 
-		/*Pessoa pes = new Pessoa("Douglas","themw63boss@outlook.com");
-		pes.mostraDados();
-
-		Aluno alun = new Aluno("Douglas","themw63boss@outlook.com",1911);
-		alun.mostraDados();
-
-		Professor prof = new Professor("André","dougblockdrift@gmail.com","Informática",5);
-		prof.mostraDados();*/
-
-		testaLista();
-		mostraMenu();
-
-
-
-  	}
-	private static void mostraMenu() {
-			
+	public static void main(String args[]) {
+		
+		int op = mostraMenu();
+		
+		while ( op != 99  ) {
+			switch (op) {
+			case 1:
+				System.out.println("Aluno");
+				break;
+			case 2:
+				System.out.println("Professor");
+				break;
+			case 99:
+				System.exit(0);
+				break;
+			default:
+				System.out.println("Opção inválida");
+				break;
+			}
+			op = mostraMenu();
 		}
-	public static int testaLista(){
-	
-
-		ArrayList<String> listaAlunos = new ArrayList<String>();
 		
-		listaAlunos.add ("Doug");
-		listaAlunos.add	("Vitor");
-		listaAlunos.add ("Amanda");
-		listaAlunos.add ("Dante");
-		listaAlunos.add ("Putin");
-		listaAlunos.add ("Vin");
-		listaAlunos.add ("Marcus");
-		listaAlunos.add ("Guilherme");
-		listaAlunos.add ("Nick");
-		listaAlunos.add ("Lauren");
-
-		ArrayList<Integer> listaNotas = new ArrayList<Integer>();
-
-		listaNotas.add (8);
-		listaNotas.add (7);
-		listaNotas.add (3);
-		listaNotas.add (4);
-		listaNotas.add (9);
-		listaNotas.add (6);
-		listaNotas.add (8);
-		listaNotas.add (1);
-		listaNotas.add (5);
-		listaNotas.add (10);
-		
-		for (String n: listaAlunos){
-			System.out.println (n);
-		
-		}
-		for(Integer nota: listaNotas){
-            System.out.println("O aluno " + listaAlunos.get(listaNotas.indexOf(nota)));
-            if(nota >= 7){
-                System.out.println("Ta Aprovado");
-            }else {  
-                System.out.println("Rodou");
-               
-                    public static void main(String[] args) {
-                        Scanner l = new Scanner(System.in);
-                        System.out.println("Cadastro de alunos e professores");
-                        System.out.println("Digite os dados: "+"\nNome ");
-                        String nome = l.nextLine();
-                        System.out.println("Login required ");
-                        String login = l.nextLine();
-                        System.out.println("ocupação");
-                        String cargo = l.nextLine();
-                        System.out.println("Senha");
-                        int senha = l.nextInt();
-                        Dados usuario;
-                        usuario = new Dados();
-                        usuario.setNome(nome);
-                        usuario.setLogin(login);
-                        usuario.setCargo(ocupacao);
-                        ArrayList<Dados> usuarios = new ArrayList<Dados>();
-                        usuarios.add(usuario);
-                        System.out.println(usuario.getNome()+"\n"+usuario.getLogin()+"\n"+usuario.getCargo());
-            }
-            
-
-      }
-		return 0;
 	}
-	
+
+	private static int mostraMenu() {
+
+		System.out.println("Informe a opção desejada: ");
+		System.out.println(" 1 : Aluno ");
+		System.out.println(" 2: Professor ");
+		System.out.println("99 para sair");
+
+		int opcaoSelecionada = scan.nextInt();
+
+		return opcaoSelecionada;
+
+	}
 }
-       
-
-       
-

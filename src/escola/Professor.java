@@ -8,7 +8,7 @@ public class Professor extends Pessoa {
         this.disciplina = disciplina;
         this.cargaHoraria = cargaHoraria;
     }
-	  public void setNome(String nome){
+	  	public void setNome(String nome){
             nome = this.nome;
         }
         public void setEmail(String email){
