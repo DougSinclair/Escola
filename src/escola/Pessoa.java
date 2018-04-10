@@ -4,10 +4,16 @@ package escola;
 
     public String nome = "";
     public String email = "";
+
     
-    public Pessoa(String n){
-        this.nome = n;
+    public Pessoa(){    	
+    	System.out.println("Informe o nome:");
+        this.nome = Escola.scan.nextLine();
+    	System.out.println("Informe o e-mail:");
+        this.email = Escola.scan.nextLine();
+        
     }
+
     public Pessoa(String n,String e){
         this.nome = n;
         this.email = e;
