@@ -1,13 +1,19 @@
 package escola;
 
+import java.util.InputMismatchException;
+
 public class Aluno extends Pessoa {
 
 	private long matricula;
 
 	public Aluno() {
 		super();
-		System.out.println("Informe a matricula:");
-		this.matricula = Escola.scan.nextLong();
+		try {
+			System.out.println("Informe a matricula:");
+			this.matricula = Escola.scan.nextLong();
+		} catch (InputMismatchException e) {
+			System.out.println("MATRICULA APENAS NUMEROS");
+		}
 	}
 
 	public Aluno(String n, String e, long m) {
@@ -27,5 +33,6 @@ public class Aluno extends Pessoa {
 		super.mostraDados();
 		System.out.println("Matricula: " + this.matricula);
 	}
+
 
 }
