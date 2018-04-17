@@ -8,10 +8,11 @@ public class Aluno extends Pessoa {
 
 	public Aluno() {
 		super();
-		try {
+		try { // comando para invocaçoes/chamados
 			System.out.println("Informe a matricula:");
 			this.matricula = Escola.scan.nextLong();
-		} catch (InputMismatchException e) {
+		} catch (InputMismatchException erro) { // tratamento a condiçao
+			
 			System.out.println("MATRICULA APENAS NUMEROS");
 		}
 	}
@@ -33,6 +34,5 @@ public class Aluno extends Pessoa {
 		super.mostraDados();
 		System.out.println("Matricula: " + this.matricula);
 	}
-
 
 }

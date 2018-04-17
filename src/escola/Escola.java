@@ -89,7 +89,12 @@ public class Escola {
 		if (al != null && al.getMatricula() != 0) { // null = sem validade
 			System.out.println("Aluno cadastrado com sucesso!");
 			listaAlunos.add(al);
-		}		
+		
+		}	
+		else {
+			System.out.println(" Aluno não cadastrado");
+			
+		}
 	}
 	
 	public static void cadProf() { // chama metodo
