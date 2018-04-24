@@ -102,13 +102,13 @@ public class Escola {
 		System.out.println(" Informar os dados do novo professor:");
 	
 		Professor prof = new Professor(); // criar novo objeto
-		if (prof != null) { // null = sem validade
+		if (prof != null && prof.getCargaHoraria() != 0 ) { // null = sem validade
 			System.out.println(" Professor cadastrado com sucesso!"); // SOP para imprimir algo
 			listaProfessores.add(prof); // for = para (para algo..)
-			for (Professor profe: listaProfessores) {
-				profe.mostraDados();
-		
+			
 			}
+		else {
+			System.out.println(" Professor não cadastrado");
 		}
 				
 		

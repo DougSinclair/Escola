@@ -1,21 +1,29 @@
 package escola;
 
+import java.util.InputMismatchException;
+
 public class Professor extends Pessoa {
 	private String disciplina;
 	private int cargaHoraria;
 
-	public Professor(String nome, String email, String disciplina, int cargaHoraria) {
+	public Professor(String nome, String email, String disciplina, int CargaHoraria) {
 		super(nome, email);
 		this.disciplina = disciplina;
-		this.cargaHoraria = cargaHoraria;
+		this.cargaHoraria = CargaHoraria;
 	}
 	
 	public Professor() {
 		super();
+		try {
 		System.out.println("Informe sua disciplina");
 		this.disciplina = Escola.scan.nextLine();
 		System.out.println("Informe sua carga horária");
 		this.cargaHoraria = Escola.scan.nextInt();
+		} catch (InputMismatchException e) {
+			
+			System.out.println("CARGA HORÁRIA APENAS NUMEROS");
+			Escola.scan.nextLine();//pra nao aparecer o erro
+		}
 		}
 	
 	public void setNome(String nome) {
