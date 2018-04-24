@@ -11,9 +11,10 @@ public class Aluno extends Pessoa {
 		try { // comando para invocaçoes/chamados
 			System.out.println("Informe a matricula:");
 			this.matricula = Escola.scan.nextLong();
-		} catch (InputMismatchException erro) { // tratamento a condiçao
+		} catch (InputMismatchException e) { // tratamento a condiçao
 			
 			System.out.println("MATRICULA APENAS NUMEROS");
+			Escola.scan.nextLine();//pra nao aparecer o erro
 		}
 	}
 
